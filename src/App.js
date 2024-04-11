@@ -90,7 +90,7 @@ function App() {
         <h2>You've made it this far. Let's stay in touch!</h2>
         <div className="social-links">
           <a href="https://twitter.com/michaelnbrock" target="_blank" rel="noopener noreferrer">Twitter</a>
-          <a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/michael-brockman-15b5b916a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://www.github.com/mikebrock03" target="_blank" rel="noopener noreferrer">Github</a>
           <a href="https://drive.google.com/file/d/1SdBH6VoJzW8K3_HtmiVoMgg6A2488qoL/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
           <p>Email: mikebrockman [at] stanford [dot] edu </p>
