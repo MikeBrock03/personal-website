@@ -14,6 +14,7 @@ body {
 
 body.modal-open {
   overflow: hidden;
+  position: fixed;
 }
 
 /* Typography */
@@ -211,6 +212,12 @@ section {
   scrollbar-width: none;
   -ms-overflow-style: none;
   margin: 0 4.5rem; /* Add this line */
+}
+
+@media (max-width: 768px) {
+  .project-details-container {
+    margin: 0 1rem; /* Adjust the side margins for mobile devices */
+  }
 }
 
 .project-details h1 {
