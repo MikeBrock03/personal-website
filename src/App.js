@@ -1,13 +1,20 @@
+// App.js
 import React, { useState } from 'react';
 import './App.css';
-import { projects, collaborations } from './data';
-import { IoCloseOutline } from 'react-icons/io5'; // Import the close icon from react-icons
+import { projects, collaborations, personalSection } from './data';
+import { IoCloseOutline } from 'react-icons/io5';
 import ReactMarkdown from 'react-markdown';
+import corkboardBackground from './images/corkboard.jpeg';
+import pin from './images/pin.png';
+import tape from './images/tape.png';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState(null);
-
-  const handleProjectClick = (project) => {
+  const [selectedExplanation, setSelectedExplanation] = useState(null);
+  
+  
+  const handleProjectClick = (project, event) => {
+    event.preventDefault();
     setSelectedProject(project);
     document.body.classList.add('modal-open');
   };
@@ -17,8 +24,17 @@ function App() {
     document.body.classList.remove('modal-open');
   };
 
+  const handleImageClick = (e, explanation, image) => {
+    e.stopPropagation();
+    setSelectedExplanation({text: explanation, image: image});
+  };
+  
+  const handleExplanationClose = () => {
+    setSelectedExplanation(null);
+  };
+
   return (
-    <div className="portfolio">
+    <div className="portfolio" style={{ backgroundImage: `url(${corkboardBackground})` }}>
       {selectedProject && (
         <div className="project-details-overlay">
           <div className="project-details-container">
@@ -41,63 +57,279 @@ function App() {
           </div>
         </div>
       )}
+      {selectedExplanation && (
+        <div className="explanation-overlay">
+          <div className="explanation-card">
+            <img src={selectedExplanation.image} alt="Explanation" />
+            <p>{selectedExplanation.text}</p>
+            <button onClick={handleExplanationClose}><span>close</span> </button>
+             
+          </div>
+        </div>
+      )}
 
-      <>
-        <header className="left-aligned">
-          <h1>Hi, it's Mike</h1>
-          <div className="spacer"></div>
-          <p className="subtitle">I'm a...</p>
-          <p className="large-black">
-            <a href="https://eu.examiner-enterprise.com/story/news/2020/12/04/november-student-month-michael-brockman/3780735001/" target="_blank" rel="noopener noreferrer" className="link-no-underline">
-              Oklahoman
-            </a>
-            &nbsp;at Stanford, focused on making AI more useful for common people.
-          </p>
-        </header>
 
-        <section>
-          <h2 className="small-grey">I've built...</h2>
-          <div className="row">
-            {projects.map((project, index) => (
-              <div key={index} className="col">
-                <div className="card" onClick={() => handleProjectClick(project)}>
-                  <img src={project.image} alt={project.title} />
-                  <h3>{project.title}</h3>
-                  <p className="subtitle">{project.subtitle}</p>
+      <section className="center-section">
+        <div className="row">
+          <div className="col">
+            <div className="item-container">
+              {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+              <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+                <div className="item-text">
+                  <p className="permanent-marker title">Hi, it's Michael!</p>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
-        </section>
-
-        <section>
-          <h2 className="small-grey">I've helped...</h2>
-          <div className="row">
-            {collaborations.map((collaboration, index) => (
-              <div key={index} className="col">
-                <div className="card" onClick={() => handleProjectClick(collaboration)}>
-                  <img src={collaboration.image} alt={collaboration.title} />
-                  <h3>{collaboration.title}</h3>
-                  <p className="subtitle">{collaboration.subtitle}</p>
+          <div className="col">
+            <div className="item-container">
+              {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+              <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+                <div className="item-text">
+                  <p className="permanent-marker subtitle">I'm an Oklahoman at Stanford, passionate about bringing the benefits of AI to all.</p>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
-        </section>
-      </>
+          <div className="col"></div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <div className="item-container">
+              {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+              <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+                <div className="item-image">
+                  <img src={personalSection.leftCol.image} alt="Michael" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+            <div className="item-container">
+              {!selectedProject && <img src={tape} alt="Tape" className="tape" />}
+              <div className="item-card">
+                <div className="item-image">
+                  <img src={personalSection.middleCol.logo} alt="Oklahoman" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+            <div className="item-container">
+              {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+              <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+                <div className="item-image">
+                  <img src={personalSection.rightCol.image} alt="Michael" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {projects.map((project, index) => (
+        <React.Fragment key={index}>
+          {index === 0 && (
+            <div className="row">
+              <div className="col">
+                <div className="item-container">
+                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  <div className="item-card special-quote">
+                    <div className="item-text">
+                      <p className="permanent-marker subtitle">I've built...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+          <section className="center-section">
+            <div className="row">
+              <div className="col">
+                <div className="item-container" onClick={(event) => handleProjectClick(project, event)}>
+                  {!selectedProject && <img src={tape} alt="Tape" className="tape" />}
+                  <div className="item-card">
+                    <div className="item-image">
+                      <img src={project.image} alt={project.title} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col">
+                <div className="item-container">
+                  {!selectedProject && <img src={tape} alt="Tape" className="tape" />}
+                  <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+                    <div className="item-text">
+                      <p className="permanent-marker subtitle">{project.subtitle}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col">
+                <div className="item-container">
+                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+                    <div className="item-image" onClick={(e) => handleImageClick(e, project.explanations[0], project.previews[0])}>
+                      <img src={project.previews[0]} alt={project.title} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                <div className="item-container">
+                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+                    <div className="item-text">
+                      <p className="permanent-marker quote">{project.quotes[0]}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col">
+                <div className="item-container">
+                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+                    <div className="item-image" onClick={(e) => handleImageClick(e, project.explanations[1], project.previews[1])}>
+                      <img src={project.previews[1]} alt={project.title} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col">
+                <div className="item-container">
+                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+                    <div className="item-text">
+                      <p className="permanent-marker quote">{project.quotes[1]}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </React.Fragment>
+      ))}
+
+      {collaborations.map((collaboration, index) => (
+        <React.Fragment key={index}>
+          {index === 0 && (
+            <div className="row">
+              <div className="col">
+                <div className="item-container">
+                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  <div className="item-card special-quote">
+                    <div className="item-text">
+                      <p className="permanent-marker subtitle">I've helped...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+          <section className="center-section">
+            <div className="row">
+              <div className="col">
+                <div className="item-container" onClick={(event) => handleProjectClick(collaboration, event)}>
+                  {!selectedProject && <img src={tape} alt="Tape" className="tape" />}
+                  <div className="item-card horizontal">
+                    <div className="item-image">
+                      <img src={collaboration.image} alt={collaboration.title} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col">
+                <div className="item-container">
+                  {!selectedProject && <img src={tape} alt="Tape" className="tape" />}
+                  <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+                    <div className="item-text">
+                      <p className="permanent-marker subtitle">{collaboration.subtitle}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col">
+                <div className="item-container">
+                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+                    <div className="item-image" onClick={(e) => handleImageClick(e, collaboration.explanations[0], collaboration.previews[0])}>
+                      <img src={collaboration.previews[0]} alt={collaboration.title} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                <div className="item-container">
+                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+                    <div className="item-text">
+                      <p className="permanent-marker quote">{collaboration.quotes[0]}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col">
+                <div className="item-container">
+                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+                    <div className="item-image" onClick={(e) => handleImageClick(e, collaboration.explanations[1], collaboration.previews[1])}>
+                      <img src={collaboration.previews[1]} alt={collaboration.title} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col">
+                <div className="item-container">
+                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+                    <div className="item-text">
+                      <p className="permanent-marker quote">{collaboration.quotes[1]}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </React.Fragment>
+      ))}
 
       <footer>
-        <h2>You've made it this far. Let's stay in touch!</h2>
-        <div className="social-links">
-          <a href="https://twitter.com/michaelnbrock" target="_blank" rel="noopener noreferrer">Twitter</a>
-          <a href="https://www.linkedin.com/in/michael-brockman-15b5b916a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://www.github.com/mikebrock03" target="_blank" rel="noopener noreferrer">Github</a>
-          <a href="https://drive.google.com/file/d/1SdBH6VoJzW8K3_HtmiVoMgg6A2488qoL/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
-          <p>Email: mikebrockman [at] stanford [dot] edu </p>
-
+        <div className="row">
+          <div className="col">
+            <div className="item-container">
+              <img src={pin} alt="Pin" className="pin" />
+              <div className={`item-card special-quote ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+                <div className="item-text">
+                  <p className="permanent-marker subtitle">You've made it this far. Let's stay in touch!</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="inspired-links">
-          <a href="https://theostrauss.com" target="_blank" rel="noopener noreferrer" className="inspired-link">inspired by Theo Strauss</a>
+        <div className="social-links">
+          {[
+            { url: 'https://twitter.com/michaelnbrock', label: 'Twitter' },
+            { url: 'https://www.linkedin.com/in/michael-brockman-15b5b916a/', label: 'LinkedIn' },
+            { url: 'https://www.github.com/mikebrock03', label: 'Github' },
+            { url: '/resume_2024.pdf', label: 'Resume' },
+          ].map((link, index) => (
+            <div className="item-container">
+              <img src={tape} alt="Tape" className="tape" />
+              <div key={index} className="item-card">
+                <a href={link.url} target="_blank" rel="noopener noreferrer" className="permanent-marker quote">{link.label}</a>
+              </div>
+            </div>
+          ))}
+          <div className="item-container">
+          <img src={tape} alt="Tape" className="tape" />
+            <div className="item-card">
+              <p className="permanent-marker quote">mikebrockman [at] stanford [dot] edu </p>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
