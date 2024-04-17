@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/mike-website/static/css/main.918abbe6.css",
-    "main.js": "/mike-website/static/js/main.df196e9c.js",
-    "static/js/453.c1057af0.chunk.js": "/mike-website/static/js/453.c1057af0.chunk.js",
-    "static/media/corkboard.jpeg": "/mike-website/static/media/corkboard.1de0a69e7e2227f5f650.jpeg",
-    "static/media/Varela-Regular.ttf": "/mike-website/static/media/Varela-Regular.1258d94610bfa4200be7.ttf",
-    "static/media/tape.png": "/mike-website/static/media/tape.2754053a94763f30f563.png",
-    "static/media/PermanentMarker-Regular.ttf": "/mike-website/static/media/PermanentMarker-Regular.109a10dca0508e41aa12.ttf",
-    "static/media/pin.png": "/mike-website/static/media/pin.ee3ca3e981acfe6ab433.png",
-    "index.html": "/mike-website/index.html",
-    "main.918abbe6.css.map": "/mike-website/static/css/main.918abbe6.css.map",
-    "main.df196e9c.js.map": "/mike-website/static/js/main.df196e9c.js.map",
-    "453.c1057af0.chunk.js.map": "/mike-website/static/js/453.c1057af0.chunk.js.map"
+    "main.css": "/static/css/main.93f8104f.css",
+    "main.js": "/static/js/main.b8660cbc.js",
+    "static/js/453.c1057af0.chunk.js": "/static/js/453.c1057af0.chunk.js",
+    "static/media/corkboard.jpeg": "/static/media/corkboard.1de0a69e7e2227f5f650.jpeg",
+    "static/media/Varela-Regular.ttf": "/static/media/Varela-Regular.1258d94610bfa4200be7.ttf",
+    "static/media/tape.png": "/static/media/tape.2754053a94763f30f563.png",
+    "static/media/PermanentMarker-Regular.ttf": "/static/media/PermanentMarker-Regular.109a10dca0508e41aa12.ttf",
+    "static/media/pin.png": "/static/media/pin.ee3ca3e981acfe6ab433.png",
+    "index.html": "/index.html",
+    "main.93f8104f.css.map": "/static/css/main.93f8104f.css.map",
+    "main.b8660cbc.js.map": "/static/js/main.b8660cbc.js.map",
+    "453.c1057af0.chunk.js.map": "/static/js/453.c1057af0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.918abbe6.css",
-    "static/js/main.df196e9c.js"
+    "static/css/main.93f8104f.css",
+    "static/js/main.b8660cbc.js"
   ]
 }
