@@ -4,9 +4,10 @@ import './App.css';
 import { projects, collaborations, personalSection } from './data';
 import { IoCloseOutline } from 'react-icons/io5';
 import ReactMarkdown from 'react-markdown';
-import corkboardBackground from './images/corkboard.jpeg';
-import pin from './images/pin.png';
 import tape from './images/tape.png';
+import tape2 from './images/tape2.png';
+import redline from './images/redline.png';
+
 
 function App() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -34,7 +35,7 @@ function App() {
   };
 
   return (
-    <div className="portfolio" style={{ backgroundImage: `url(${corkboardBackground})` }}>
+    <div className="portfolio" >
       {selectedProject && (
         <div className="project-details-overlay">
           <div className="project-details-container">
@@ -73,7 +74,7 @@ function App() {
         <div className="row">
           <div className="col">
             <div className="item-container">
-              {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+              {!selectedProject && <img src={tape2} alt="tape2" className="tape2" />}
               <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
                 <div className="item-text">
                   <p className="permanent-marker title">Hi, it's Michael!</p>
@@ -83,8 +84,8 @@ function App() {
           </div>
           <div className="col">
             <div className="item-container">
-              {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
-              <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+              {!selectedProject && <img src={tape2} alt="tape2" className="tape2" />}
+              <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'} sticky`}>
                 <div className="item-text">
                   <p className="permanent-marker subtitle">I'm an Oklahoman at Stanford, passionate about bringing the benefits of AI to all.</p>
                 </div>
@@ -94,53 +95,46 @@ function App() {
           <div className="col"></div>
         </div>
         <div className="row">
-          <div className="col">
-            <div className="item-container">
-              {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
-              <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
-                <div className="item-image">
-                  <img src={personalSection.leftCol.image} alt="Michael" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="item-container">
-              {!selectedProject && <img src={tape} alt="Tape" className="tape" />}
-              <div className="item-card">
-                <div className="item-image">
-                  <img src={personalSection.middleCol.logo} alt="Oklahoman" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="item-container">
-              {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
-              <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
-                <div className="item-image">
-                  <img src={personalSection.rightCol.image} alt="Michael" />
-                </div>
-              </div>
-            </div>
+    <div className="col">
+      <div className="item-container">
+        {!selectedProject && <img src={tape2} alt="tape2" className="tape2" />}
+        <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+          <div className="item-image" onClick={(e) => handleImageClick(e, personalSection.leftCol.explanation, personalSection.leftCol.image)}>
+            <img src={personalSection.leftCol.image} alt="Michael" />
           </div>
         </div>
+      </div>
+    </div>
+    <div className="col">
+      <div className="item-container">
+        {!selectedProject && <img src={tape} alt="Tape" className="tape" />}
+        <div className="item-card">
+          <div className="item-image" onClick={(e) => handleImageClick(e, personalSection.middleCol.explanation, personalSection.middleCol.logo)}>
+            <img src={personalSection.middleCol.logo} alt="Oklahoman" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="col">
+      <div className="item-container">
+        {!selectedProject && <img src={tape2} alt="tape2" className="tape2" />}
+        <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
+          <div className="item-image" onClick={(e) => handleImageClick(e, personalSection.rightCol.explanation, personalSection.rightCol.image)}>
+            <img src={personalSection.rightCol.image} alt="Michael" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
       </section>
 
       {projects.map((project, index) => (
         <React.Fragment key={index}>
           {index === 0 && (
             <div className="row">
-              <div className="col">
-                <div className="item-container">
-                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
-                  <div className="item-card special-quote">
-                    <div className="item-text">
-                      <p className="permanent-marker subtitle">I've built...</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div className="col">  
+                <p className="subtitle-on-board">I've built...</p>
+              </div> 
             </div>
           )}
           <section className="center-section">
@@ -167,7 +161,7 @@ function App() {
               </div>
               <div className="col">
                 <div className="item-container">
-                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  {!selectedProject && <img src={tape2} alt="tape2" className="tape2" />}
                   <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
                     <div className="item-image" onClick={(e) => handleImageClick(e, project.explanations[0], project.previews[0])}>
                       <img src={project.previews[0]} alt={project.title} />
@@ -179,7 +173,7 @@ function App() {
             <div className="row">
               <div className="col">
                 <div className="item-container">
-                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  {!selectedProject && <img src={tape2} alt="tape2" className="tape2" />}
                   <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
                     <div className="item-text">
                       <p className="permanent-marker quote">{project.quotes[0]}</p>
@@ -189,7 +183,7 @@ function App() {
               </div>
               <div className="col">
                 <div className="item-container">
-                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  {!selectedProject && <img src={tape2} alt="tape2" className="tape2" />}
                   <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
                     <div className="item-image" onClick={(e) => handleImageClick(e, project.explanations[1], project.previews[1])}>
                       <img src={project.previews[1]} alt={project.title} />
@@ -199,7 +193,7 @@ function App() {
               </div>
               <div className="col">
                 <div className="item-container">
-                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  {!selectedProject && <img src={tape2} alt="tape2" className="tape2" />}
                   <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
                     <div className="item-text">
                       <p className="permanent-marker quote">{project.quotes[1]}</p>
@@ -209,6 +203,11 @@ function App() {
               </div>
             </div>
           </section>
+          {index !== projects.length - 1 && (
+            <div className="redline-container">
+              <img src={redline} alt="Redline" className="redline" />
+            </div>
+          )}
         </React.Fragment>
       ))}
 
@@ -217,13 +216,8 @@ function App() {
           {index === 0 && (
             <div className="row">
               <div className="col">
-                <div className="item-container">
-                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
-                  <div className="item-card special-quote">
-                    <div className="item-text">
-                      <p className="permanent-marker subtitle">I've helped...</p>
-                    </div>
-                  </div>
+                <div className="item-text">
+                  <p className="subtitle-on-board">I've helped...</p>
                 </div>
               </div>
             </div>
@@ -252,7 +246,7 @@ function App() {
               </div>
               <div className="col">
                 <div className="item-container">
-                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  {!selectedProject && <img src={tape2} alt="tape2" className="tape2" />}
                   <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
                     <div className="item-image" onClick={(e) => handleImageClick(e, collaboration.explanations[0], collaboration.previews[0])}>
                       <img src={collaboration.previews[0]} alt={collaboration.title} />
@@ -264,7 +258,7 @@ function App() {
             <div className="row">
               <div className="col">
                 <div className="item-container">
-                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  {!selectedProject && <img src={tape2} alt="tape2" className="tape2" />}
                   <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
                     <div className="item-text">
                       <p className="permanent-marker quote">{collaboration.quotes[0]}</p>
@@ -274,7 +268,7 @@ function App() {
               </div>
               <div className="col">
                 <div className="item-container">
-                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  {!selectedProject && <img src={tape2} alt="tape2" className="tape2" />}
                   <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
                     <div className="item-image" onClick={(e) => handleImageClick(e, collaboration.explanations[1], collaboration.previews[1])}>
                       <img src={collaboration.previews[1]} alt={collaboration.title} />
@@ -284,7 +278,7 @@ function App() {
               </div>
               <div className="col">
                 <div className="item-container">
-                  {!selectedProject && <img src={pin} alt="Pin" className="pin" />}
+                  {!selectedProject && <img src={tape2} alt="tape2" className="tape2" />}
                   <div className={`item-card ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
                     <div className="item-text">
                       <p className="permanent-marker quote">{collaboration.quotes[1]}</p>
@@ -294,21 +288,19 @@ function App() {
               </div>
             </div>
           </section>
+          {index !== collaborations.length - 1 && (
+            <div className="redline-container">
+              <img src={redline} alt="Redline" className="redline" />
+            </div>
+          )}
         </React.Fragment>
       ))}
 
       <footer>
         <div className="row">
-          <div className="col">
-            <div className="item-container">
-              <img src={pin} alt="Pin" className="pin" />
-              <div className={`item-card special-quote ${Math.random() < 0.5 ? 'tilt-left' : 'tilt-right'}`}>
-                <div className="item-text">
-                  <p className="permanent-marker subtitle">You've made it this far. Let's stay in touch!</p>
-                </div>
+              <div className="item-text">
+                <p className="subtitle-on-board">You've made it this far. Let's stay in touch!</p>
               </div>
-            </div>
-          </div>
         </div>
         <div className="social-links">
           {[
