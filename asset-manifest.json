@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.93f8104f.css",
-    "main.js": "/static/js/main.b8660cbc.js",
+    "main.css": "/static/css/main.1773148d.css",
+    "main.js": "/static/js/main.1be4a960.js",
     "static/js/453.c1057af0.chunk.js": "/static/js/453.c1057af0.chunk.js",
-    "static/media/corkboard.jpeg": "/static/media/corkboard.1de0a69e7e2227f5f650.jpeg",
+    "static/media/tape2.png": "/static/media/tape2.96363671b854e8d90980.png",
+    "static/media/tape.png": "/static/media/tape.f0a127a3b3931b0d8095.png",
     "static/media/Varela-Regular.ttf": "/static/media/Varela-Regular.1258d94610bfa4200be7.ttf",
-    "static/media/tape.png": "/static/media/tape.2754053a94763f30f563.png",
     "static/media/PermanentMarker-Regular.ttf": "/static/media/PermanentMarker-Regular.109a10dca0508e41aa12.ttf",
-    "static/media/pin.png": "/static/media/pin.ee3ca3e981acfe6ab433.png",
+    "static/media/ShadowsIntoLight-Regular.ttf": "/static/media/ShadowsIntoLight-Regular.e8c09384ff0643bf385d.ttf",
+    "static/media/redline.png": "/static/media/redline.9b7289e83fcc5bcaa17b.png",
+    "static/media/cursor.png": "/static/media/cursor.f0c2a565f96a7b4581d3.png",
     "index.html": "/index.html",
-    "main.93f8104f.css.map": "/static/css/main.93f8104f.css.map",
-    "main.b8660cbc.js.map": "/static/js/main.b8660cbc.js.map",
+    "main.1773148d.css.map": "/static/css/main.1773148d.css.map",
+    "main.1be4a960.js.map": "/static/js/main.1be4a960.js.map",
     "453.c1057af0.chunk.js.map": "/static/js/453.c1057af0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93f8104f.css",
-    "static/js/main.b8660cbc.js"
+    "static/css/main.1773148d.css",
+    "static/js/main.1be4a960.js"
   ]
 }
