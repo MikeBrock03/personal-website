@@ -8,8 +8,8 @@ export const projects = [
       '/images/punch/example_1.png',
       '/images/punch/example_2.png',
       '/images/punch/example_3.png',
-      '/images/punch/example_4.jpeg',
-      '/images/punch/example_5.jpeg',
+      '/images/punch/example_4.png',
+      '/images/punch/example_5.png',
     ],
     previews: [
       '/images/punch/preview_1.JPG',
@@ -27,7 +27,7 @@ export const projects = [
   {
     image: '/images/supahot/logo.png',
     title: 'SUPaHOT',
-    subtitle: 'A secure, personalized AI healthcare assistant',
+    subtitle: 'a secure, personalized AI healthcare assistant',
     is: "a secure, personalized AI healthcare assistant. \n\n &nbsp; \n\n Inspired by [LLMonFHIR by the Stanford Byers Center for Biodesign](https://github.com/StanfordBDHG/LLMonFHIR), which uses GPT-4. They recognized that using cloud AI providers is expensive and insecure. \n\n &nbsp; \n\n With my team in CS224N, we created a data pipeline to decrease the amount of tokens that were passed into our small model. We then iterated on a 7b LLaMA model pre-trained with medical data and finetuned on our pipeline tasks. This method achieved similar performance to gpt-3.5-turbo, our oracle. \n\n &nbsp; \n\n [Common phones today can run 7B parameter models](https://www.qualcomm.com/news/onq/2023/09/democratizing-on-device-generative-ai-with-sub-10-billion-parameter-models#:~:text=LLMs%20with%207%20billion%20parameters,cycles%20refresh%20the%20installed%20base). By processing health data locally, it ensures privacy while providing customized health advice. \n\n &nbsp; \n\n We are working to integrate with [Stanford Spezi](https://spezi.sites.stanford.edu/) and the Byers Center for Biodesign, [read our paper here](/supahot.pdf).",
     looks: [
       '/images/supahot/example_1.png',
@@ -49,12 +49,32 @@ export const projects = [
 ];
 
 export const collaborations = [
-  
+  {
+    image: '/images/jitter/logo.png',
+    title: 'Magic Ratio',
+    subtitle: 'implementing ambient AI in motion design',
+    is: "a way to implement AI in designers workflow. \n\n &nbsp; \n\n It is essential for us to ensure that designers stay in the drivers seat for their own designs. \n\n &nbsp; \n\n Take an animation that was made for an Instagram Story, and automatically convert it to be a Youtube video. This feature is currently in Beta and only available for members of the Discord server, but will be released soon.",
+    looks: [
+      '/images/jitter/example_1.gif',
+    ],
+    previews: [
+      '/images/jitter/preview_1.jpg', 
+      '/images/jitter/preview_2.jpg',
+    ],
+    explanations: [
+      'us presenting at figma config!',
+      'mount tam with the team!',
+    ],
+    quotes: [
+      '"how can AI compliment designer flow?"',
+      '"language models can be surprisingly effective at understanding and editing animations."',
+    ],
+  },
   {
     image: '/images/immigration/logo.png',
     title: 'ImmigrationAI',
-    subtitle: 'The turbotax of the USCIS immigration process',
-    is: "the turbotax of immigration. \n\n &nbsp; \n\n At a small 'legal futurists' team at Filevine, we simplified the complex and often daunting process of navigating immigration paperwork. \n\n &nbsp; \n\n Right now, you have to identify what forms apply to you, print them, and know how to answer the questions. We solve all of that. \n\n &nbsp; \n\n Functioning like a digital guide, ImmigrationAI walks users through the necessary forms and questions, providing clear, AI-generated summaries to demystify legal jargon and make the process more accessible. I designed the user experience in React, created the form flow, and created the OAuth service to connect with Filevine using Passport. \n\n &nbsp; \n\n [Check it out here!](https://www.filevine.com/platform/immigrationai/)",
+    subtitle: 'the turbotax of the USCIS immigration process',
+    is: "the turbotax of immigration. \n\n &nbsp; \n\n At a small 'legal futurists' team at Filevine, we simplified the complex and often daunting process of navigating immigration paperwork. \n\n &nbsp; \n\n Right now, you have to identify what forms apply to you, print them, and know how to answer the questions. We solve all of that. \n\n &nbsp; \n\n ImmigrationAI walks users through the necessary forms and questions, providing clear, AI-generated summaries to demystify legal jargon and make the process more accessible. I designed the user experience in React, created the form flow, and created the OAuth service to connect with Filevine using Passport. \n\n &nbsp; \n\n [Check it out here!](https://www.filevine.com/platform/immigrationai/)",
     looks: [
       '/images/immigration/example_1.png',
       '/images/immigration/example_2.png',
@@ -75,9 +95,9 @@ export const collaborations = [
   },
   {
     image: '/images/propaganda/logo.png',
-    title: 'Protecting against Propaganda',
-    subtitle: 'A chrome extension to detect potential misinformation in media',
-    is: "Protecting against Propaganda is a research project with [Stanford Behavioral Design Labs](https://behaviordesign.stanford.edu/) and [Robb Willer](https://sociology.stanford.edu/people/robb-willer), soon a Chrome extension. \n\n &nbsp; \n\n By analyzing content for logical fallacies and deceptive rhetoric, the tool encourages critical engagement with information, fostering a more discerning and informed approach to consuming media. \n\n &nbsp; \n\n I designed the Chrome extension using React and helped tailor the model to recognize patterns indicative of misinformation, focusing on structural and syntactic cues rather than subjective judgments. \n\n &nbsp; \n\n Our preliminary findings showed that users became more critical readers, though the tool's impact on misinformation spread remains under study before being released. \n\n &nbsp; \n\n Paper and chrome extension releasing soon!",
+    title: 'Scout',
+    subtitle: 'a chrome extension to detect potential misinformation in media',
+    is: "a research project with [Stanford Behavioral Design Labs](https://behaviordesign.stanford.edu/) and [Robb Willer](https://sociology.stanford.edu/people/robb-willer), soon a Chrome extension. \n\n &nbsp; \n\n By analyzing content for logical fallacies and deceptive rhetoric, the tool encourages critical engagement with information, fostering a more discerning and informed approach to consuming media. \n\n &nbsp; \n\n I designed the Chrome extension using React and helped tailor the model to recognize patterns indicative of misinformation, focusing on structural and syntactic cues rather than subjective judgments. \n\n &nbsp; \n\n Our preliminary findings showed that users became more critical readers, though the tool's impact on misinformation spread remains under study before being released. \n\n &nbsp; \n\n Paper and chrome extension releasing soon!",
     looks: [
       '/images/propaganda/example_1.png',
       '/images/propaganda/example_2.png',
@@ -98,39 +118,17 @@ export const collaborations = [
       '"from working at the Oklahoma House of Representatives, i saw that transparency is discouraged."',
     ],
   },
-  {
-    image: '/images/lifting/logo.png',
-    title: 'Lifting the Bar',
-    subtitle: 'A psychological intervention to reduce recidivism to juvenile detention',
-    is: "an intervention to reduce recidivism among juveniles through a tech-driven psychological intervention by [Greg Walton](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4981081/). \n\n &nbsp; \n\n Right now, a child that goes to juvenile detention has an 80% likelihood of returning (or going to jail). \n\n &nbsp; \n\n We found that writing a letter to school staff decreases recidivism to about 20%. However, we found that some students were not participating at a desired level which undermines the goal of the study. \n\n &nbsp; \n\n So, I got the chance to enhance the user interface using JavaScript within the Qualtrics platform. I took from principles in [Greg Walton's own research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4981081/). This redesign led to a 10x increase in response length and a 20% improvement in Qualtrics-measured response quality, significantly enhancing the intervention's effectiveness and the overall user experience. \n\n &nbsp; \n\n [Check out the intervention here!](https://ltbdraft.sites.stanford.edu/)",
-    looks: [
-      '/images/lifting/example_1.png',
-      '/images/lifting/example_2.png',
-      '/images/lifting/example_3.png',
-    ],
-    previews: [
-      '/images/lifting/preview_1.jpg',
-      '/images/lifting/preview_2.jpg',
-    ],
-    explanations: [
-      'colombia has cycles of crime starting from childhood.',
-      'whiteboards are my best friend!',
-    ],
-    quotes: [
-      '"80 percent of kids who go to juvenile detention go back. we need to stop this."',
-      '"why does every psychological study look like it was made in the 90s?"',
-    ],
-  },
+
 ];
 
 export const personalSection = {
   leftCol: {
-    quote: "Hi, it's Michael!",
+    quote: "hi, it's Michael!",
     image: '/images/michael/michael-1.jpg',
     explanation: 'i love the stanford farm!',
   },
   middleCol: {
-    subtitle: "I'm an Oklahoman at Stanford, passionate about bringing the benefits of AI to all.",
+    subtitle: "i'm an Oklahoman at Stanford, passionate about bringing the benefits of AI to all.",
     logo: '/images/michael/michael-2.jpg',
     explanation: 'big plans @ big sur with bryce',
   },
