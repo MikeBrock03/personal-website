@@ -28,8 +28,8 @@ function App() {
       setFlippedCards({});
     };
 
-    const flipTimer = setTimeout(flipAllCards, 1000);
-    const unflipTimer = setTimeout(unflipAllCards, 2000);
+    const flipTimer = setTimeout(flipAllCards, 2000);
+    const unflipTimer = setTimeout(unflipAllCards, 3000);
 
     return () => {
       clearTimeout(flipTimer);
