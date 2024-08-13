@@ -123,7 +123,7 @@ function App() {
           <div className="col">
             <div className="item-container">
               {!selectedProject}
-              <div className={`item-card`}>
+              <div className={`item-card flat`}>
                 <div className="item-text">
                   <p className="permanent-marker title">hi, it's Michael!</p>
                 </div>
@@ -133,7 +133,7 @@ function App() {
           <div className="col">
             <div className="item-container">
               {!selectedProject}
-              <div className={`item-card sticky`}>
+              <div className={`item-card flat sticky`}>
                 <div className="item-text">
                   <p className="permanent-marker subtitle">i'm an Oklahoman at Stanford, passionate about bringing the benefits of AI to all.</p>
                 </div>
@@ -206,8 +206,8 @@ function App() {
             <div className="row">
               <div className="col">
                 <div className="item-container" onClick={(event) => handleProjectClick(collaboration, event)}>
-                  {!selectedProject }
-                  <div className={getCardClass(6)}>
+                {!selectedProject && <img src={tape} alt="tape" className="tape" />}
+                  <div className={getCardClass(3)}>
                     <div className='item-front'>
                       <div className="item-image">
                         <img src={collaboration.image} alt={collaboration.title} />
@@ -222,7 +222,7 @@ function App() {
               <div className="col">
                 <div className="item-container">
                   {!selectedProject }
-                  <div className={`item-card`}>
+                  <div className={`item-card flat`}>
                     <div className="item-text">
                       <p className="permanent-marker subtitle">{collaboration.subtitle}</p>
                     </div>
@@ -232,7 +232,7 @@ function App() {
               <div className="col">
                 <div className="item-container">
                   {!selectedProject && <img src={tape} alt="tape" className="tape" />}
-                  <div className={getCardClass(7)}>
+                  <div className={getCardClass(4)}>
                     <div className="item-front">
                       <div className="item-image" onClick={(e) => handleImageClick(e, collaboration.explanations[0], collaboration.previews[0])}>
                         <img src={collaboration.previews[0]} alt={collaboration.title} />
@@ -249,7 +249,7 @@ function App() {
               <div className="col">
                 <div className="item-container">
                   {!selectedProject }
-                  <div className={`item-card `}>
+                  <div className={`item-card flat`}>
                     <div className="item-text">
                       <p className="permanent-marker quote">{collaboration.quotes[0]}</p>
                     </div>
@@ -259,7 +259,7 @@ function App() {
               <div className="col">
                 <div className="item-container">
                   {!selectedProject && <img src={tape} alt="tape" className="tape" />}
-                  <div className={getCardClass(8)}>
+                  <div className={getCardClass(5)}>
                     <div className="item-front">
                       <div className="item-image" onClick={(e) => handleImageClick(e, collaboration.explanations[1], collaboration.previews[1])}>
                         <img src={collaboration.previews[1]} alt={collaboration.title} />
@@ -274,7 +274,7 @@ function App() {
               <div className="col">
                 <div className="item-container">
                   {!selectedProject}
-                  <div className={`item-card`}>
+                  <div className={`item-card flat`}>
                     <div className="item-text">
                       <p className="permanent-marker quote">{collaboration.quotes[1]}</p>
                     </div>
@@ -304,8 +304,8 @@ function App() {
             <div className="row">
               <div className="col">
                 <div className="item-container" onClick={(event) => handleProjectClick(project, event)}>
-                  {!selectedProject }
-                  <div className={getCardClass(3)}>
+                  {!selectedProject && <img src={tape} alt="tape" className="tape" />}
+                  <div className={getCardClass(6)}>
                     <div className="item-front">
                       <div className="item-image">
                         <img src={project.image} alt={project.title} />
@@ -320,7 +320,7 @@ function App() {
               <div className="col">
                 <div className="item-container">
                   {!selectedProject}
-                  <div className={`item-card`}>
+                  <div className={`item-card flat`}>
                     <div className="item-text">
                       <p className="permanent-marker subtitle">{project.subtitle}</p>
                     </div>
@@ -330,7 +330,7 @@ function App() {
               <div className="col">
                 <div className="item-container">
                   {!selectedProject && <img src={tape} alt="tape" className="tape" />}
-                  <div className={getCardClass(4)}>
+                  <div className={getCardClass(7)}>
                     <div className='item-front'>
                       <div className="item-image" onClick={(e) => handleImageClick(e, project.explanations[0], project.previews[0])}>
                         <img src={project.previews[0]} alt={project.title} />
@@ -347,7 +347,7 @@ function App() {
               <div className="col">
                 <div className="item-container">
                   {!selectedProject}
-                  <div className={`item-card `}>
+                  <div className={`item-card flat`}>
                     <div className="item-text">
                       <p className="permanent-marker quote">{project.quotes[0]}</p>
                     </div>
@@ -357,7 +357,7 @@ function App() {
               <div className="col">
                 <div className="item-container">
                   {!selectedProject && <img src={tape} alt="tape" className="tape" />}
-                  <div className={getCardClass(5)}>
+                  <div className={getCardClass(8)}>
                     <div className='item-front'>
                       <div className="item-image" onClick={(e) => handleImageClick(e, project.explanations[1], project.previews[1])}>
                         <img src={project.previews[1]} alt={project.title} />
@@ -372,7 +372,7 @@ function App() {
               <div className="col">
                 <div className="item-container">
                   {!selectedProject}
-                  <div className={`item-card `}>
+                  <div className={`item-card flat`}>
                     <div className="item-text">
                       <p className="permanent-marker quote">{project.quotes[1]}</p>
                     </div>

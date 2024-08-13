@@ -1,5 +1,4 @@
 /* App.css */
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Inter:wght@400;700&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -130,6 +129,8 @@ section {
   flex-direction: column;
 }
 
+
+
 .card img {
   max-width: 100%;
   height: auto;
@@ -250,6 +251,10 @@ section {
   transform-style: preserve-3d;
 }
 
+.item-card.flat {
+  box-shadow: none;
+}
+
 .item-card.flipped {
   transform: rotateY(180deg);
 }
@@ -282,7 +287,6 @@ section {
 .item-card.sticky {
   background-color: #fdffd5;
   padding: 1.5rem;
-  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2); /* Increase box-shadow for visible drop shadow */
   position: relative;
   display: flex;
   flex-direction: column;
