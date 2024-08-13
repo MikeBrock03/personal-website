@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.653e17c5.css",
+    "main.css": "/static/css/main.94a52e6f.css",
     "main.js": "/static/js/main.633dfa28.js",
     "static/js/453.c1057af0.chunk.js": "/static/js/453.c1057af0.chunk.js",
     "static/media/Varela-Regular.ttf": "/static/media/Varela-Regular.1258d94610bfa4200be7.ttf",
@@ -9,12 +9,12 @@
     "static/media/redline.png": "/static/media/redline.9b7289e83fcc5bcaa17b.png",
     "static/media/cursor.png": "/static/media/cursor.f0c2a565f96a7b4581d3.png",
     "index.html": "/index.html",
-    "main.653e17c5.css.map": "/static/css/main.653e17c5.css.map",
+    "main.94a52e6f.css.map": "/static/css/main.94a52e6f.css.map",
     "main.633dfa28.js.map": "/static/js/main.633dfa28.js.map",
     "453.c1057af0.chunk.js.map": "/static/js/453.c1057af0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.653e17c5.css",
+    "static/css/main.94a52e6f.css",
     "static/js/main.633dfa28.js"
   ]
 }
