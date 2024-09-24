@@ -1,25 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.8aaf7854.css",
-    "main.js": "/static/js/main.81b5eec3.js",
+    "main.css": "/static/css/main.2c4b11df.css",
+    "main.js": "/static/js/main.a4e20de0.js",
     "static/js/453.c1057af0.chunk.js": "/static/js/453.c1057af0.chunk.js",
     "static/media/routes-1.png": "/static/media/routes-1.41c9022f98b375400b8d.png",
+    "static/media/routes-4.png": "/static/media/routes-4.22107401311c3e780e77.png",
+    "static/media/music-1.png": "/static/media/music-1.c853c73eca54dc709197.png",
     "static/media/routes-2.png": "/static/media/routes-2.2fc04fced17d5e5ab5e7.png",
+    "static/media/training-1.png": "/static/media/training-1.98656371ff595c07ba61.png",
     "static/media/routes-3.png": "/static/media/routes-3.9c6d4e599fda2037cdb3.png",
     "static/media/Varela-Regular.ttf": "/static/media/Varela-Regular.1258d94610bfa4200be7.ttf",
     "static/media/stretch-1.png": "/static/media/stretch-1.6fe311dfe694c52bed22.png",
     "static/media/tape.png": "/static/media/tape.e1e399ce64504297a63f.png",
     "static/media/stretch-2.png": "/static/media/stretch-2.7a8e9355c4f6437e1b46.png",
     "static/media/PermanentMarker-Regular.ttf": "/static/media/PermanentMarker-Regular.109a10dca0508e41aa12.ttf",
+    "static/media/training-2.png": "/static/media/training-2.7bec030910e7233c67d6.png",
     "static/media/redline.png": "/static/media/redline.9b7289e83fcc5bcaa17b.png",
     "static/media/cursor.png": "/static/media/cursor.f0c2a565f96a7b4581d3.png",
     "index.html": "/index.html",
-    "main.8aaf7854.css.map": "/static/css/main.8aaf7854.css.map",
-    "main.81b5eec3.js.map": "/static/js/main.81b5eec3.js.map",
+    "main.2c4b11df.css.map": "/static/css/main.2c4b11df.css.map",
+    "main.a4e20de0.js.map": "/static/js/main.a4e20de0.js.map",
     "453.c1057af0.chunk.js.map": "/static/js/453.c1057af0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8aaf7854.css",
-    "static/js/main.81b5eec3.js"
+    "static/css/main.2c4b11df.css",
+    "static/js/main.a4e20de0.js"
   ]
 }
