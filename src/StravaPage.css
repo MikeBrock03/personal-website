@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .strava-page {
+    min-height: 100vh;
+    background-color: #21211F;
+    padding: 32px;
+    color: white;
+  }
+  
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 40px;
+  }
+
+  .card-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .card.expanded .card-content {
+    max-height: 1000px; /* Adjust this value based on your maximum expected content height */
+    transition: max-height 0.5s ease-in;
+  }
+
+  .card-content.hidden {
+    display: none;
+  }
+  
+  .card {
+    background-color: #141413;
+    border-radius: 8px;
+    padding: 24px;
+    flex: 0 0 calc(50% - 16px);
+    max-width: calc(50% - 16px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .arrow {
+  font-size: 0.8em;
+  transition: transform 0.3s ease;
+}
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .card.expanded {
+    cursor: default;
+    max-height: 1000px; /* Adjust this value based on your maximum expected content height */
+    transition: max-height 0.5s ease-in;
+  }
+  
+  .header {
+    color: #FC5200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  .name {
+    color: #FC5200;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 24px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+  }
+
+  .to-strava {
+    color: #FC5200;
+    font-size: 2rem;
+    margin: 0 auto 32px;
+    display: block;
+    font-weight: 800;
+  }
+
+  .preamble {
+    margin-bottom: 48px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+  }
+  
+  .image-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
