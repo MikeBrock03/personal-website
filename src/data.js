@@ -1,5 +1,27 @@
 export const projects = [
   {
+    image: '/images/links/logo.png',
+    title: 'Links',
+    subtitle: 'a personalized math practice app powered by an AI tutor',
+    is: "an affordable way to practice math with immediate help. \n\n &nbsp; \n \n Inspired by niece and nephew attempting to learn math with apps, but they are far too gamified and distant from actual math learning. Instead, Links centers around solving problems using a virtual whiteboard and accomplishing units through a story. If they get stuck, Links reads what they have written and provides immediate feedback. \n\n &nbsp; \n\n Our mission is to make personalized, high-quality math tutoring accessible to everyone, not just those who can afford $60/hour private sessions. \n\n &nbsp; \n\n [Check out our website here!](https://learnwithlinks.com/)",
+    looks: [
+      '/images/links/example_1.jpg',
+      '/images/links/example_2.jpg',
+    ],
+    previews: [
+      '/images/links/preview_1.jpg',
+      '/images/links/preview_2.jpg',
+    ],
+    explanations: [
+      'miro and i presenting links to cs224g!.',
+      'my cofounder and i met studying abroad in berlin and bonded over being midwesterners',
+    ],
+    quotes: [
+      '"i want my niece and nephew to be excited about learning math"',
+      '"how could we design a math app that is not just a game but still fun?"',
+    ],
+  },
+  {
     image: '/images/punch/logo.png',
     title: 'Punch',
     subtitle: 'a platform to pipeline students to trade school',
