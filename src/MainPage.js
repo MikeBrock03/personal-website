@@ -136,7 +136,7 @@ function App() {
               {!selectedProject}
               <div className={`item-card flat sticky`}>
                 <div className="item-text">
-                  <p className="permanent-marker subtitle">i'm an Oklahoman at Stanford, passionate about bringing the benefits of AI to all.</p>
+                  <p className="permanent-marker subtitle">i'm an Oklahoman at Google, passionate about bringing the benefits of AI to all.</p>
                 </div>
               </div>
             </div>
@@ -411,7 +411,7 @@ function App() {
           ))}
           <div className="item-container">
             <div className="item-card">
-              <p className="permanent-marker quote">mikebrockman [at] stanford [dot] edu </p>
+              <p className="permanent-marker quote">brockman.michael2003 [at] gmail [dot] com </p>
             </div>
           </div>
         </div>
