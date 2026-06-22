@@ -72,6 +72,28 @@ export const projects = [
 
 export const collaborations = [
   {
+    image: '/images/google/logo.png',
+    title: 'Autodubbing',
+    subtitle: 'empowering anyone anywhere to watch anything.',
+    is: "empowering people around the world to watch videos in their language. \n\n &nbsp; \n\n I joined YouTube because I am inspired by this lofty mission of dubbing every video on the internet. Now, when non-English speakers watch a Khan Academy video, they do not have to look back and forth between his writings and the captions. Sal Khan just speaks in your language. That's awesome. \n\n &nbsp; \n\n My role here has been primarily to work on viewer control and discoverability. Answering questions such as how can we make better predictions on what language to translate a video into? If we make a mistake, how easy is it to switch back? How do we provide the most delightful experience for the billions of people who visit everyday?",
+    looks: [
+      '/images/google/example_1.png',
+      '/images/google/example_2.png'
+    ],
+    previews: [
+      '/images/google/preview_1.jpg', 
+      '/images/google/preview_2.jpg',
+    ],
+    explanations: [
+      'shoutout the youtube claw machine. never won.',
+      'wow i love my team!',
+    ],
+    quotes: [
+      '"what if me and my family from colombia could watch the same youtube videos easily?"',
+      '"how can AI actually benefit a product that billions of people use everyday?"',
+    ],
+  },
+  {
     image: '/images/jitter/logo.png',
     title: 'Magic Ratio',
     subtitle: 'implementing ambient AI in motion design',
@@ -150,7 +172,7 @@ export const personalSection = {
     explanation: 'i love the stanford farm!',
   },
   middleCol: {
-    subtitle: "i'm an Oklahoman at Stanford, passionate about bringing the benefits of AI to all.",
+    subtitle: "i'm an Oklahoman at Google, passionate about bringing the benefits of AI to all.",
     logo: '/images/michael/michael-2.jpg',
     explanation: 'big plans @ big sur with bryce',
   },
